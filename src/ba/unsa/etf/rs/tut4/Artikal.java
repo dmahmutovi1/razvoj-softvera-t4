@@ -14,6 +14,7 @@ import java.util.ArrayList;
         konstruktori i setter metode trebaju bacati izuzetak tipa IllegalArgumentException ako je cijena 0 ili negativna,
         te ako su šifra ili naziv prazni stringovi; tekst izuzetka treba biti "Šifra je prazna", "Naziv je prazan", "Cijena je negativna";
                 */
+
 public class Artikal {
     private String sifra;
     private String naziv;
@@ -67,7 +68,8 @@ public class Artikal {
     }
 
     public String toString(){
-        return sifra + "," + naziv + "," + cijena; // vraca "sifra,naziv,cijena"
+        return sifra + "," + naziv + "," + cijena;
+        // vraca "sifra,naziv,cijena"
     }
 
     @Override

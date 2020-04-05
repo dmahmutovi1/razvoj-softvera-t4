@@ -140,4 +140,24 @@ class ArtikalTest {
         assertFalse(lista.contains(new Artikal("ABC", "Usluga", 100)));
         assertFalse(lista.contains(new Artikal("DEF", "Usluga", 100)));
     }
+
+    @Test
+    void ctorArtikalTest() {
+        var artikal = new Artikal("12345,Smoki,1.45");
+
+        assertEquals(artikal.getCijena(), 1.45);
+        assertEquals(artikal.getNaziv(), "Smoki");
+        assertEquals(artikal.getSifra(), "12345");
+    }
+
+    @Test
+    void sifraTestBacaIllegalArgumentException() {
+        assertThrows(IllegalArgumentException.class , () -> new Artikal("", "Smoki", 1.45), "Šifra je prazna");
+    }
+
+    @Test
+    void testMetodeToString() {
+    var artikal = new Artikal("sifraa,nesto,200.0");
+    assertEquals(artikal.toString(), "sifraa,nesto,200.0");
+    }
 }
